@@ -22,6 +22,7 @@ public:
     // 💡HINT: you might want to use the overloaded display function to do the recursion
     void display()
     {
+        display(root_);
     }
 
 private:
@@ -40,10 +41,15 @@ private:
     void display(Node *nextNode)
     {
         // base case
-
-        // visit case
-
+        if(nextNode == nullptr) {
+            return
+        }
+        
         // recursive case
         // 💡HINT: unlike recursing through linked lists where there is only one node, a tree has two nodes to check
+        return display(nextNode->GetLeft());
+        // visit case
+        std::cout << nextNode->value_.second << std::endl;
+        return display(nextNode->GetRight());
     }
 };

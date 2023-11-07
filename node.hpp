@@ -1,11 +1,12 @@
-template <typename Key, typename Value>
+#include <string>
+
 class Node
 {
 public:
-    std::pair<Key, Value> value_;
+    std::pair<std::size_t, std::string> value_;
     Node *right_;
     Node *left_;
     Node *parent_;
 
-    Node(T value) : value_(value), left_(nullptr), right_(nullptr) {}
+    Node(std::pair<std::size_t, std::string> value) : value_(value), left_(nullptr), right_(nullptr) {}
 };

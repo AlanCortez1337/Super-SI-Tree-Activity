@@ -12,6 +12,16 @@ public:
     Node *GetLeft() const { return root_->left_; }
     Node *GetRight() const { return root_->right_; }
 
+    //⭐TODO: Using Betten's code, try to recreate the steps using a recursive loop!
+    Node** find(std::size_t key) {
+        //💡Hint: in the private scope there is a function that you need to overload in order to start the recursion
+    }
+
+    //⭐TODO: Using Betten's code, try to recreate the steps using a recursive loop!
+    void erase(std::size_t key) {
+        //💡Hint: in the private scope there is a function that you need to overload in order to start the recursion
+    }
+
     void insert(std::pair<std::size_t, std::string> value)
     {
         //STEP 1: initialize variables
@@ -35,6 +45,18 @@ public:
 
 private:
     Node *root_;
+
+    Node** find(/*⭐TODO:Think about what parameters you will need to pass through each recursive loop*/) {
+        //base case
+        //visit case
+        //recursive case(s)
+    }
+
+    void erase(/*⭐TODO:Think about what parameters you will need to pass through each recursive loop*/) {
+        //base case
+        //visit case
+        //recursive case(s)
+    }
 
     void insert_search(Node* &current, Node* &parent, Node** &child, std::size_t key)
     {
